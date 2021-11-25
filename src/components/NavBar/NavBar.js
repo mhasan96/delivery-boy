@@ -51,10 +51,17 @@ const NavBar = () => {
                   About
                 </Nav.Link>
                 {user.email ? (
+                  <Nav.Link className="text-black " as={HashLink} to="/orders">
+                    Orders
+                  </Nav.Link>
+                ) : (
+                  <Nav.Link></Nav.Link>
+                )}
+                {user.email ? (
                   <Nav.Link
                     className="text-black "
                     as={HashLink}
-                    to="/manageOrders"
+                    to="/manageServices"
                   >
                     Manage Services
                   </Nav.Link>
